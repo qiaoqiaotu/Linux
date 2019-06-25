@@ -1,3 +1,5 @@
+
+let mapleader=','
 " 在插入模式中用jj 代替Esc 
 inoremap jj <Esc>
 " \ 开启鼠标模式
@@ -14,6 +16,15 @@ syntax on
 call plug#begin('~/.vim/plugged')
 
 Plug 'mhinz/vim-startify'
-
+Plug 'scrooloose/nerdtree'
+Plug 'kien/ctrlp.vim'
 " Initialize plugin system
 call plug#end()
+
+nnoremap <leader>v :NERDTreeFind<cr>
+nnoremap <leader>g :NERDTreeToggle<cr>
+let NERDTreeShowHidden=1
+let NERDTreeIgnore = [
+	\ '\.git$', '\.hg$', '\.svn$', '\.stversions$', '\.svn$', '\.swp$',
+	\]
+let g:ctrlp_map = '<c-p>'
