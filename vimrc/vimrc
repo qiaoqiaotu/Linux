@@ -1,4 +1,5 @@
 
+setlocal autoindent sw=2 ts=2 expandtab
 let mapleader=','
 " 在插入模式中用jj 代替Esc 
 inoremap jj <Esc>
